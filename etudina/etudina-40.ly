@@ -6,14 +6,16 @@
 \include "../assets/ly/lib/spontini/oso-padding.ly"
 \include "../assets/ly/lib/spontini/tabular-functions.ly"
 \include "../assets/ly/lib/utils.ily"
-\include "../assets/ly/template/henle-early.ily"
+
+\include "../assets/ly/template/henle.ily"
 
 #(define showEditorStuff "false")
 
 \header {
-  title = "E T U D I N A"
-  subtitle = "№40 in b Minor"
-  subsubtitle = "« Dans le style de Erik Satie »"
+  title = "Etudina"
+  subtitle = "No.40 in b Minor « Dans le style de Erik Satie »"
+  subsubtitle = "Komponiert 2023"
+  composer = "F. X. P."
   tagline = ##f
 }
 
@@ -24,7 +26,10 @@ upper = {
 \key b \minor
 \clef "treble"
   
-\tempo "Lent et trist" 4 = 108
+\tempo \markup { 
+  "Lent et trist" \hspace #0.4
+  \rhythm { c4 } = 108
+}
   
 \relative {
   | R2.*3 | r4 r 
@@ -124,6 +129,10 @@ r8
 \relative { | cs'''4\jsShape "6" "cpts" #'((0.194 . -1.537) (-0.346 . 1.142) (-0.822 . 1.475) (-0.017 . -0.652)) ( b as | \stemNeutral gs fs es) | }
 \\ \relative { | fss''2. | }
 >>
+
+\tempo \markup {
+  "Revenez au 1"\super{"er"} "mouv"\super{"t"}
+}
 
 \relative {
   | fs''4 e ds~ | 4 cs^\p^\> b~ | 4 gs e~ | 4 cs fs\! | 

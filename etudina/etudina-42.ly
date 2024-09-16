@@ -6,7 +6,8 @@
 \include "../assets/ly/lib/spontini/oso-padding.ly"
 \include "../assets/ly/lib/spontini/tabular-functions.ly"
 \include "../assets/ly/lib/utils.ily"
-\include "../assets/ly/template/henle-early.ily"
+
+\include "../assets/ly/template/henle.ily"
 
 #(define showEditorStuff "false")
 
@@ -43,12 +44,13 @@
 %-----------------%
 
 \header {
-  title = "E T U D I N A"
-  subtitle = \markup { "№42 in " \super { \flat } "B Major" }
-  subsubtitle = \markup { 
-    \italic { "Gao Tang Bao" } 
-    "or" \italic { "8-bit Style" } 
+  title = "Etudina"
+  subtitle = \markup { 
+    "No.42 in " \super { \flat }"B Major" 
+    \italic { "Gao Tang Bao" } "or" \italic { "8-bit Style" } 
   }
+  subsubtitle = "Komponiert 2024"
+  composer = "F. X. P."
   tagline = ##f
 }
 
@@ -57,7 +59,7 @@ upper = {
 \time 4/4
 \key bf \major
 \clef "bass"
-\tempo 4 = 108
+\tempo \markup { \rhythm { c4 } = 108 }
 
 \new Voice <<
 \relative { | d'8-. 8-. bf4-- }
@@ -71,7 +73,7 @@ upper = {
 \bar "||"
 
 \clef "treble"
-\tempo "A punto" 4 = 128
+\tempo \markup { "A punto" \rhythm { c4 } = 128 }
 
 <<
 \relative {

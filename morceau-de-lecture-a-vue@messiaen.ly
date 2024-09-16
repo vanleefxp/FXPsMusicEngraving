@@ -6,12 +6,14 @@
 \include "./assets/ly/lib/spontini/oso-padding.ly"
 \include "./assets/ly/lib/spontini/tabular-functions.ly"
 \include "./assets/ly/lib/utils.ily"
-\include "./assets/ly/template/henle-early.ily"
+\include "./assets/ly/template/henle.ily"
 
 \header {
   title = "Morceau de lecture à vue"
   subtitle = "pour les examens de piano de l’École normale de musique"
+  composer = "Olivier Messian"
   tagline = ##f
+  additional = \markup { \vspace #2 }
 }
 
 upper = {

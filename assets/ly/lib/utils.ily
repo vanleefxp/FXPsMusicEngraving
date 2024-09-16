@@ -59,6 +59,57 @@ floatingGraceOff = {
   \revert Voice.SpacingSpanner.strict-grace-spacing
 }
 
+startGraceMusic = {
+  \override Voice.NoteHead.font-size = -5.5
+  \override Voice.Rest.font-size = -5.5
+  \override Voice.Accidental.font-size = -5.5
+  \override Voice.Beam.beam-thickness = 0.25
+  \override Voice.Beam.length-fraction = 0.55
+  \override Voice.Stem.length-fraction = 0.75
+  \override Voice.Flag.font-size = -5.5
+}
+
+stopGraceMusic = {
+  \revert Voice.NoteHead.font-size
+  \revert Voice.Rest.font-size
+  \revert Voice.Accidental.font-size
+  \revert Voice.Beam.beam-thickness
+  \revert Voice.Beam.length-fraction
+  \revert Voice.Stem.length-fraction
+  \revert Voice.Flag.font-size
+}
+
+startAppoggiaturaMusic =
+{
+  <>\startGraceSlur
+  \startGraceMusic
+}
+
+stopAppoggiaturaMusic =  {
+  \stopGraceMusic
+  <>\stopGraceSlur
+}
+
+startSlashedGraceMusic =  {
+  \temporary \override Flag.stroke-style = "grace"
+  \startGraceMusic
+}
+
+stopSlashedGraceMusic =  {
+  \revert Flag.stroke-style
+  \stopGraceMusic
+}
+
+startAcciaccaturaMusic =  {
+  <>\startGraceSlur
+  \startSlashedGraceMusic
+}
+
+stopAcciaccaturaMusic =  {
+    \stopSlashedGraceMusic
+    <>\stopGraceSlur
+}
+
 smallNotes = #(define-music-function 
   (parser location mus) 
   (ly:music?)

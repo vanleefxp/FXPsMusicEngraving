@@ -6,18 +6,18 @@
 \include "../assets/ly/lib/spontini/oso-padding.ly"
 \include "../assets/ly/lib/spontini/tabular-functions.ly"
 \include "../assets/ly/lib/utils.ily"
-\include "../assets/ly/template/henle-early.ily"
+
+\include "../assets/ly/template/henle.ily"
 
 #(define showEditorStuff "false")
 
 \header {
-  title = "E T U D I N A"
+  title = "Etudina"
   subtitle = \markup {
-    "№37 in" \super{\flat}"B Major"
+    "No.37 in" \super{\flat}"B Major" \italic { "The Horn is Blowing" }
   }
-  subsubtitle = \markup {
-    \italic { "The Horn is Blowing" }
-  }
+  subsubtitle = "Komponiert 2023"
+  composer = "F. X. P."
   tagline = ##f
 }
 

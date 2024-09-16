@@ -6,13 +6,16 @@
 \include "../assets/ly/lib/spontini/oso-padding.ly"
 \include "../assets/ly/lib/spontini/tabular-functions.ly"
 \include "../assets/ly/lib/utils.ily"
-\include "../assets/ly/template/henle-early.ily"
+
+\include "../assets/ly/template/henle.ily"
 
 #(define showEditorStuff "false")
 
 \header {
-  title = "E T U D I N A"
-  subtitle = "№35 in a Minor"
+  title = "Etudina"
+  subtitle = "No.35 in a Minor"
+  subsubtitle = "Komponiert 2020 & 2023"
+  composer = "F. X. P."
   tagline = ##f
 }
 
@@ -23,7 +26,9 @@ upper = {
 \override Beam.breakable = ##t
 
 \time 2/4
-\tempo "Allegretto" 4 = 112
+\tempo \markup { 
+  "Allegretto" \hspace #0.4 \rhythm { c4 } = 112 
+}
   
 \repeat volta 2 {
 \relative {
@@ -206,7 +211,10 @@ upper = {
 
 \section 
 \sectionLabel "Trio"
-\tempo "Più mosso" 4 = 126
+\tempo \markup { 
+  "Più mosso" \hspace #0.4 
+  \rhythm { c4 } = 126 
+}
 
 a''16  b''
 
@@ -423,7 +431,7 @@ lower = {
 >>
 
 \relative {
-  | e'16(^\exprMark"legato" d e cs bf) cs e gs,( | a bf) g e f( cs' d) g |
+  | e'16(_\exprMark"legato" d e cs bf) cs e gs,( | a bf) g e f( cs' d) g |
   | b, a b( g f) d'( b g) | a g( a b c) d e c |
 }
 
