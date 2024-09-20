@@ -4,8 +4,18 @@
 %#(ly:font-config-display-fonts)
 
 \header {
-  padding = #0.5
+  tagline = ##f
 }
+
+exprMark = #(define-music-function 
+  (parser location content) 
+  (markup?) 
+  #{ 
+    -\markup { 
+      \override #'(font-name . "Century Expanded LT Italic")
+      { \magnify #0.8 \italic { #content } } 
+    } 
+  #})
 
 \paper {
   oddHeaderMarkup = \markup
@@ -42,19 +52,16 @@
         \vspace #0.2
         \fill-line {
           \magnify #1.1
-          \override #'(font-name . "Bodoni LT Pro Book")
           { \fromproperty #'header:subtitle }
         }
         \vspace #-0.2
         \fill-line {
           \magnify #0.9
-          \override #'(font-name . "Bodoni LT Pro Book")
           { \fromproperty #'header:subsubtitle }
         }
         \fill-line {
           \fromproperty #'header:poet
           { \large \bold \fromproperty #'header:instrument }
-          \override #'(font-name . "Bodoni LT Pro Book")
           { \fromproperty #'header:composer }
         }
         \fill-line {
@@ -123,7 +130,7 @@
     (set-global-fonts
      #:music "sebastiano"
      #:brace "sebastiano"
-     #:roman "Century Expanded LT, Old Standard TT, FZShuSong-Z01"
+     #:roman "Bodoni LT Pro, Old Standard TT, FZShuSong-Z01"
      #:sans "Ysabeau Office, LXGW Wenkai GB, LXGW Wenkai"
      #:typewriter "Cascadia Code, Consolas, Courier New, LXGW Wenkai Mono GB, LXGW Wenkai Mono"
     )) % , gonville, emmentaler

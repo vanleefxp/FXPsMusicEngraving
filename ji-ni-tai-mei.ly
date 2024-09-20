@@ -6,7 +6,8 @@
 \include "./assets/ly/lib/spontini/oso-padding.ly"
 \include "./assets/ly/lib/spontini/tabular-functions.ly"
 \include "./assets/ly/lib/utils.ily"
-\include "./assets/ly/template/henle-early.ily"
+
+\include "./assets/ly/template/henle.ily"
 
 #(define showEditorStuff "false")
 
@@ -24,10 +25,8 @@ ll = #(define-music-function
     "also known as "\italic { "Just Because You’re so Beautiful" }
   }
   composer = "Original music by Cai Xukun (KUN)"
-  arranger = \markup {
-    Piano arrangement by \italic { F. X. P. }
-  }
-  %opus = "Op. 2.5"
+  arranger = "Piano arrangement by F. X. P."
+  opus = "Op. 2.5"
   tagline = ##f
 }
 
@@ -410,7 +409,7 @@ upper = {
   }
   >>
   \relative {
-    | r4 <c''' df f af>4 <bf ef g> <ef, ef'>8 <ef af c>~ |
+    | r4\exprMark"grandioso" <c''' df f af>4 <bf ef g> <ef, ef'>8 <ef af c>~ |
     | 8 <ef c'> <c' ef af>4 <bf ef g> <ef, ef'>8 <ef af c>~ |
     | <ef af c>8 <ef g bf c ef>8~ 2 
   }
@@ -775,4 +774,4 @@ r8 \relative { <af,, af'>-. \grace { s8 } <g g'>-. <gf gf'>-. }
 
 } %end lower
 
-\include "../lib/ly/piano-template.ly"
+\include "./assets/ly/lib/spontini/piano-template.ly"

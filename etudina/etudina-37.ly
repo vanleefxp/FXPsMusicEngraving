@@ -28,7 +28,7 @@ upper = {
 \time 4/4
 \clef "treble"
 \key bf \major
-\tempo "Adagio" 4 = 63
+\tempo \markup { "Adagio" \hspace #0.4 \rhythm { c4 } = 63 }
 \sectionLabel "Introduzione"
   
 %% mm1
@@ -318,7 +318,7 @@ r2\ff
 
 \section
 \sectionLabel "Tema"
-\tempo  "Allegro" 2 = 80
+\tempo \markup { "Allegro" \rhythm { c2 } = 80 }
 \relative {
   | bf'4(\mf f' ef d8 c | d4 bf c f | ef4 d c bf | c2.) f,4( |
   | bf4 f' ef d8 c | d4 bf c f | g4 f8 ef d4 bf | c2.) a4( |
@@ -406,7 +406,7 @@ r2\ff
 
 %% mm101 - 116
 
-\tempo "Poco più lento" 2 = 72
+\tempo \markup { "Poco più lento" \rhythm { c2 } = 72 }
 \section
 \sectionLabel "Var. I"
 
@@ -517,7 +517,7 @@ s2. | \time 1/2 s2 |
 \section
 \sectionLabel "Var. II"
 \time 4/4
-\tempo "Allegretto" 4 = 108
+\tempo \markup { "Allegretto" \vspace #0.4 \rhythm { c4 } = 108 }
 
 \set Score.proportionalNotationDuration = #(ly:make-moment 1/16)
 
@@ -710,7 +710,7 @@ s2. | \time 1/2 s2 |
 \section 
 \sectionLabel "Var. III Menuetto"
 \time 3/4
-\tempo "Vivace" 2. = 72
+\tempo \markup { "Vivace" \vspace #0.4 \rhythm { c2. } = 72 }
 
 \relative {
   | <bf' f d>2 <f' b, f>4-. | <ef c g>2 <d bf f>4-. | <c f, ef>2 <a ef b>4-. | <bf f d>2 <b g d>4-. |
@@ -794,7 +794,7 @@ s2. | \time 1/2 s2 |
 \time 2/2
 \unset baseMoment
 \unset beatStructure
-\tempo "Allegro" 4 = 144
+\tempo \markup { "Allegro" \vspace #0.4 \rhythm { c4 } = 144 }
 \set Score.proportionalNotationDuration = #(ly:make-moment 1/16)
 
 \relative {
@@ -807,7 +807,7 @@ s2. | \time 1/2 s2 |
   | bf2 \afterGrace c\trill { bf16 c } | bf2 r2 |
 }
 
-\tempo "Più mosso" 4 = 168
+\tempo \markup { "Più mosso" \vspace #0.4 \rhythm { c4 } = 168 }
 
 \relative {
   | d''16(\p ef f8) 8-. 8-. 8-. 8-. 8-. 8-. | <fs as,>2 r2 |
@@ -981,7 +981,7 @@ s2. | \time 1/2 s2 |
 \section
 \sectionLabel "Coda"
 \time 4/4
-\tempo "Adagio" 4 = 63
+\tempo \markup { "Adagio" \vspace #0.4 \rhythm { c4 } = 63 }
 
 \relative {
   bf'16(\mf f' ef d32 c d16 bf c a) \allowBreak
